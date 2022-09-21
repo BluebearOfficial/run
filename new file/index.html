@@ -98,7 +98,7 @@
             if (spd > 5) spd = 5;
             if (dis > 1000) dis = 1000;
             time.setTime(tn);
-             {
+             if(dis<1000){
                 
                 document.getElementById("h").innerHTML = (time.getHours() < 10) ? ('0' + time.getHours()) : (time.getHours());
                 document.getElementById("mi").innerHTML = (time.getMinutes() < 10) ? ('0' + time.getMinutes()) : (time.getMinutes());
@@ -115,7 +115,11 @@
                 
                 
             }
-            
+            else {
+                document.getElementById("all").innerHTML = "1000m completed";
+                document.getElementById("all").style.fontSize = "48px";
+            }
+
 
             let s = time.getSeconds();
             let m = time.getMinutes();
