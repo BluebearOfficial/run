@@ -38,21 +38,21 @@
         
         <br><br>
         
-        <button onclick="ADD10();" class="btn" type="button">努力</button>
+        <button onclick="ADD10();" class="btn" type="button">accelerate</button>
       
         
         <br><br>
-        已跑时间：
+        time elapsed：
         <span id="h">--</span>:
         <span id="mi">--</span>:
         <span id="s">--</span>
         <br><br>
         
-        当前速度：<span id="spd">--</span>m/s 
+        current speed：<span id="spd">--</span>m/s 
         <br><br>
-        已跑距离：<span id="dis">--</span>米 
+        distance finished：<span id="dis">--</span>m 
         <br><br>
-        <i id="note">蓝熊加油！<br>
+        <i id="note">Come on blue bear！<br>
         
         <br><br>
     </div>
@@ -122,7 +122,7 @@
                 let hour = (time.getHours() < 10) ? ('0' + time.getHours()) : (time.getHours());
                 let min = (time.getMinutes() < 10) ? ('0' + time.getMinutes()) : (time.getMinutes());
                 let second = (time.getSeconds() < 10) ? ('0' + time.getSeconds()) : (time.getSeconds());
-				document.getElementById("all").innerHTML+="<br>用时："+hour+":"+min+":"+second;
+				document.getElementById("all").innerHTML+="<br>time elapsed："+hour+":"+min+":"+second;
             }
           
         }
