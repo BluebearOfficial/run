@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -118,18 +118,13 @@
             else {
                 document.getElementById("all").innerHTML = "1000m completed";
                 document.getElementById("all").style.fontSize = "48px";
-                document.getElementById("h").innerHTML = (time.getHours() < 10) ? ('0' + time.getHours()) : (time.getHours());
-                document.getElementById("mi").innerHTML = (time.getMinutes() < 10) ? ('0' + time.getMinutes()) : (time.getMinutes());
-                document.getElementById("s").innerHTML = (time.getSeconds() < 10) ? ('0' + time.getSeconds()) : (time.getSeconds());
+				
+                let hour = (time.getHours() < 10) ? ('0' + time.getHours()) : (time.getHours());
+                let min = (time.getMinutes() < 10) ? ('0' + time.getMinutes()) : (time.getMinutes());
+                let second = (time.getSeconds() < 10) ? ('0' + time.getSeconds()) : (time.getSeconds());
+				document.getElementById("all").innerHTML+="<br>用时："+hour+":"+min+":"+second;
             }
-
-
-            let s = time.getSeconds();
-            let m = time.getMinutes();
-            let h = time.getHours();
-
-            
-            
+          
         }
         
       
