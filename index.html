@@ -63,7 +63,7 @@
         let step = 50 / 3;
         let dis = 0;
         let hurry = 0;
-        let spd = 5;
+        let spd = 1;
         let time = new Date();
         let tn = 1663603200000;
         function init() {
@@ -107,7 +107,7 @@
                 
                 
                 dis += spd * (step / 1000) ;
-                spd = 5-dis*0.002+hurry*0.003;if (spd > 5) spd = 5;
+                spd = 5-dis*0.02+hurry*0.03;if (spd > 5) spd = 5;
         
                 document.getElementById("spd").innerHTML = spd.toFixed(3);
                 
