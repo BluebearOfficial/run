@@ -118,6 +118,9 @@
             else {
                 document.getElementById("all").innerHTML = "1000m completed";
                 document.getElementById("all").style.fontSize = "48px";
+                document.getElementById("h").innerHTML = (time.getHours() < 10) ? ('0' + time.getHours()) : (time.getHours());
+                document.getElementById("mi").innerHTML = (time.getMinutes() < 10) ? ('0' + time.getMinutes()) : (time.getMinutes());
+                document.getElementById("s").innerHTML = (time.getSeconds() < 10) ? ('0' + time.getSeconds()) : (time.getSeconds());
             }
 
 
