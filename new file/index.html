@@ -40,7 +40,7 @@
         <br><br>
         
         <button onclick="ADD10();" class="btn" type="button">accelerate</button>
-        <button onclick="AD10();" class="btn" type="button">energy</button>
+        
         
         <br><br>
         time elapsed：
@@ -64,8 +64,7 @@
         let step = 50 / 3;
         let dis = 0;
         let hurry = 0;
-        let spd = 1;
-	let energy = 0;    
+        let spd = 1;   
         let time = new Date();
         let tn = 1663603200000;
         function init() {
@@ -80,9 +79,7 @@
             hurry = hurry+1;
         }
 
-        function AD10() {
-            energy = energy+1;
-        }
+        
        
         
 
@@ -110,7 +107,7 @@
                 
                 
                 
-                dis += spd * (step / 1000)+ energy * (step / 1000);
+                dis += spd * (step / 1000);
                 spd = 1-dis*0.02+hurry* (0.1-dis / 30000);if (spd > 5) spd = 5;
         
                 document.getElementById("spd").innerHTML = spd.toFixed(3);
