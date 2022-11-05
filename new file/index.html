@@ -115,7 +115,7 @@
                 
                 
                 dis += spd * (step / 1000);
-                spd = 1-dis*0.02+hurry* (0.1-dis / 30000);if (spd > 5) spd = 5;
+                spd = 3+hurry* (0.1-dis / 30000);if (spd > 5) spd = 5;
         
                 document.getElementById("spd").innerHTML = spd.toFixed(3);
                 
